@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <!-- Navigation bar -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="logo.png">
+    </div>
+    <a href="#home">Home</a>
+    <a href="#au">About</a>
+    <a href="#ser">Services</a>
+    <a href="#log">Login</a>
+  </div>
+  <div class="img1" id="home">
+    <h1>EDUCATION IS ONE THING NO ONE CAN TAKE AWAY FROM YOU</h1>
+    <h3>~ <i><b>TECHNOLOGY</b> can become the <b>WINGS</b> that will allow the educational world to <b>FLY</b> farther
+        and faster
+        than ever before.</i>
+    </h3>
+  </div>
+  <div class="au" id="au">
+    <div class="abus">
+      <h1>About Us</h1>
+      <p>We're passionate about empowering students to reach their full potential.
+        Our mission is to provide accessible and innovative educational resources that inspire curiosity,
+        foster critical thinking, and promote lifelong learning.We're here to support you on your educational journey.
+        Join our vibrant community and explore a world of knowledge, creativity, and discovery with us!"</p>
+    </div>
+    <img src="au.png">
+  </div>
+  <div class="ser" id="ser">
+    <h1>Services</h1>
+    <div class="serimg">
+      <div class="i1">
+        <img src="image1.png" alt="Image 1">
+        <h4>VIDEO LECTURES</h4>
+        <p>Empower your learning journey with our video lectures for every chapter and topic,
+          providing you with the support and resources you need to succeed academically.</p>
+      </div>
+      <div class="i1">
+        <img src="image2.png" alt="Image 2">
+        <h4>DOUBT SOLVING</h4>
+        <p>Take advantage of our doubt-solving facilities to gain clarity, overcome challenges,
+          and propel your learning forward.</p>
+      </div>
+      <div class="i1">
+        <img src="image3.jpg" alt="Image 3">
+        <h4>ANALYSIS</h4>
+        <p>Our performance analysis features are designed to empower you with actionable insights,
+          facilitate self-directed learning,and optimize your academic performance. </p>
+      </div>
+      <div class="i1">
+        <img src="image4.jpg" alt="Image 4">
+        <h4>TEST</h4>
+        <p>Variety of tests and assessments covering individual topics or chapters to evaluate
+          mastery and identify areas for improvement.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="l" id="log">
+    <div class="container">
+      <div class="slider"></div>
+      <div class="btn">
+        <button class="login">Login</button>
+        <button class="signup">Signup</button>
+      </div>
+      <div class="form-section">
+
+        <!-- login form -->
+        <form action="/login" method="post">
+          <div class="login-box">
+            <b><div class="errorMessage"></div></b>
+            <input type="email" class="email ele" name="email" placeholder="youremail@email.com" autocomplete="on" required>
+            <input type="password" name="password" class="password ele" placeholder="password" required>
+            <input type="submit" class="clkbtn" value="login">
+            
+          </div>
+          
+        </form>
+
+        <!-- signup form -->
+        <form action="signup" method="post">
+          <div class="signup-box">
+            <b><div class="errorMessage" id="signup_error"></div></b>
+
+            <input type="text" class="name ele" name="fullname" placeholder="Full Name" required>
+
+            <input type="number" class="phno ele" name="mobileno" placeholder="mobile-no" minlength="10" maxlength="10" required>
+
+            <input type="email" class="email ele" name="email" placeholder="Email" autocomplete="on" required>
+
+            <input type="password" class="password ele" name="password" placeholder="Password" required>
+
+            <select name="class" class="clas ele" required place>
+              <option disabled selected hidden>Select Class</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+
+            <select name="group" class="group ele" required>
+              <option  disabled selected hidden>Select Group</option>
+              <option value="A">A group</option>
+              <option value="B">B group</option>
+            </select>
+            <button class="clkbtn">Signup</button>
+          </div>
+        </form>
+      </div>
+      <script>
+        let signup = document.querySelector(".signup");
+        let login = document.querySelector(".login");
+        let slider = document.querySelector(".slider");
+        let formSection = document.querySelector(".form-section");
+
+        signup.addEventListener("click", () => {
+          slider.classList.add("moveslider");
+          formSection.classList.add("form-section-move");
+        });
+
+        login.addEventListener("click", () => {
+          slider.classList.remove("moveslider");
+          formSection.classList.remove("form-section-move");
+        });
+      </script>
+    </div>
+</body>
+
+</html>

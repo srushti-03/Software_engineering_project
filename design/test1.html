@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Home</title>
+
+   <!-- Font Awesome CDN link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- Custom CSS file link  -->
+   <link rel="stylesheet" href="css/style.css">
+   <style>
+      html{
+         overflow-y: hidden;
+      }
+    html::-webkit-scrollbar {
+         display: none;
+      }
+    .footer{
+        position:fixed;
+    }
+    .que li{
+        font-size: 30px;
+    }
+    .liol{
+        list-style-type: lower-roman;
+    }
+    .que ul li{
+        font-size: 20px;
+        list-style-type: none;
+    }
+
+    .mcq-section{
+      margin-left: 10%;
+    }
+    .box-container {
+        max-height:60vh;
+        overflow-y:auto; /* Enable vertical scrolling if content exceeds container height */
+        margin-bottom: 0px;
+        margin-top: 20px;
+        background-color: white;
+    }
+
+    
+</style>
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+      <a href="/dashboard" class="logo"><img src="images/LHLogo.png" width="250" height="78"></a>
+
+      <form action="search.html" method="post" class="search-form">
+         <input type="text" name="search_box" required placeholder="Search courses..." maxlength="100">
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+
+      <div class="icons">
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+   </section>
+
+</header>   
+
+<div class="side-bar">
+
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="profile">
+      <img src="images/pic-1.jpg" class="image" alt="">
+      <h3 class="name" id="userFullName"></h3>
+           <p class="role">student</p>
+            <a href="/profile" class="btn">view profile</a>
+   </div>
+
+   <nav class="navbar">
+      <a href="/dashboard"><i class="fas fa-home"></i><span>dashboard</span></a>
+      <a href="/courses"><i class="fas fa-graduation-cap"></i><span>courses</span></a>
+      <a href="/tests"> <i class="fa-solid fa-pen-to-square"></i><span>tests</span></a>
+      <a href="/doubts"><i class="fa-solid fa-question"></i><span>doubts</span></a>   <a href="/logout"><i class="fa-solid fa-right-from-bracket"></i><span>log out</span></a>
+   </nav>
+
+</div>
+
+<section class="t">
+   <h1 class="heading"><button onclick="history_back()" class="Back"><i class="fa-solid fa-arrow-left"></i></button>CHAPTER 1 TEST:</h1>
+
+   <div class="box-container">
+
+      <div class="box">
+        
+         
+         <!-- MCQ Section -->
+         <div class="mcq-section">
+            
+            <ol class="que">
+               <li class="liol">What is the universal set in set theory?
+                  <ul class="opt">
+                     <li><input type="radio" name="q1" value="a"> A. Empty set</li>
+                     <li><input type="radio" name="q1" value="b"> B. Singleton set</li>
+                     <li><input type="radio" name="q1" value="c"> C. Set containing all possible elements</li>
+                     <li><input type="radio" name="q1" value="d"> D. Finite set</li>
+                  </ul>
+               </li>
+               <li class="liol">Which notation represents the complement of set A?
+                  <ul class="opt">
+                     <li><input type="radio" name="q2" value="a"> A. A'</li>
+                     <li><input type="radio" name="q2" value="b"> B. A∪B</li>
+                     <li><input type="radio" name="q2" value="c"> C. A∩B</li>
+                     <li><input type="radio" name="q2" value="d"> D. A−B</li>
+                  </ul>
+               </li>
+               <li class="liol">If A = {1, 2, 3} and B = {3, 4, 5}, what is A ∩ B?
+                <ul class="opt">
+                   <li><input type="radio" name="q3" value="a"> A. {1, 2}</li>
+                   <li><input type="radio" name="q3" value="b"> B. {3}</li>
+                   <li><input type="radio" name="q3" value="c"> C. {4, 5}</li>
+                   <li><input type="radio" name="q3" value="d"> D. {1, 2, 3, 4, 5}</li>
+                </ul>
+             </li>
+             <li class="liol">If A = {1, 2, 3} and B = {3, 4, 5}, what is A × B?
+                <ul class="opt">
+                   <li><input type="radio" name="q4" value="a"> A. {(1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (2, 5), (3, 3), (3, 4), (3, 5)}</li>
+                   <li><input type="radio" name="q4" value="b"> B. {(1, 3), (2, 3), (3, 3), (1, 4), (2, 4), (3, 4), (1, 5), (2, 5), (3, 5)}</li>
+                   <li><input type="radio" name="q4" value="c"> C. {(1, 1), (2, 2), (3, 3)}</li>
+                   <li><input type="radio" name="q4" value="d"> D. {(1, 3), (2, 4), (3, 5)}</li>
+                </ul>
+             </li>
+             <li class="liol">What is the power set of {a, b}?
+                <ul class="opt">
+                   <li><input type="radio" name="q5" value="a"> A. {{}, {a}, {b}}</li>
+                   <li><input type="radio" name="q5" value="b"> B. {{}, {a}, {b}, {a, b}}</li>
+                   <li><input type="radio" name="q5" value="c"> C. {{a}, {b}}</li>
+                   <li><input type="radio" name="q5" value="d"> D. {a, b}</li>
+                </ul>
+             </li>
+             <li class="liol">What is the universal set in set theory?
+                <ul class="opt">
+                   <li><input type="radio" name="q6" value="a"> A. Empty set</li>
+                   <li><input type="radio" name="q6" value="b"> B. Singleton set</li>
+                   <li><input type="radio" name="q6" value="c"> C. Set containing all possible elements</li>
+                   <li><input type="radio" name="q6" value="d"> D. Finite set</li>
+                </ul>
+             </li>
+             <li class="liol">Which notation represents the complement of set A?
+                <ul class="opt">
+                   <li><input type="radio" name="q7" value="a"> A. A'</li>
+                   <li><input type="radio" name="q7" value="b"> B. A∪B</li>
+                   <li><input type="radio" name="q7" value="c"> C. A∩B</li>
+                   <li><input type="radio" name="q7" value="d"> D. A−B</li>
+                </ul>
+             </li>
+             <li class="liol">If A = {1, 2, 3} and B = {3, 4, 5}, what is A ∩ B?
+              <ul class="opt">
+                 <li><input type="radio" name="q8" value="a"> A. {1, 2}</li>
+                 <li><input type="radio" name="q8" value="b"> B. {3}</li>
+                 <li><input type="radio" name="q8" value="c"> C. {4, 5}</li>
+                 <li><input type="radio" name="q8" value="d"> D. {1, 2, 3, 4, 5}</li>
+              </ul>
+           </li>
+           <li class="liol">If A = {1, 2, 3} and B = {3, 4, 5}, what is A × B?
+              <ul class="opt">
+                 <li><input type="radio" name="q9" value="a"> A. {(1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (2, 5), (3, 3), (3, 4), (3, 5)}</li>
+                 <li><input type="radio" name="q9" value="b"> B. {(1, 3), (2, 3), (3, 3), (1, 4), (2, 4), (3, 4), (1, 5), (2, 5), (3, 5)}</li>
+                 <li><input type="radio" name="q9" value="c"> C. {(1, 1), (2, 2), (3, 3)}</li>
+                 <li><input type="radio" name="q9" value="d"> D. {(1, 3), (2, 4), (3, 5)}</li>
+              </ul>
+           </li>
+           <li class="liol">What is the power set of {a, b}?
+              <ul class="opt">
+                 <li><input type="radio" name="q10" value="a"> A. {{}, {a}, {b}}</li>
+                 <li><input type="radio" name="q10" value="b"> B. {{}, {a}, {b}, {a, b}}</li>
+                 <li><input type="radio" name="q10" value="c"> C. {{a}, {b}}</li>
+                 <li><input type="radio" name="q10" value="d"> D. {a, b}</li>
+              </ul>
+           </li>
+           <li class="liol">If A = {1, 2, 3} and B = {3, 4, 5}, what is A ∩ B?
+            <ul class="opt">
+               <li><input type="radio" name="q11" value="a"> A. {1, 2}</li>
+               <li><input type="radio" name="q11" value="b"> B. {3}</li>
+               <li><input type="radio" name="q11" value="c"> C. {4, 5}</li>
+               <li><input type="radio" name="q11" value="d"> D. {1, 2, 3, 4, 5}</li>
+            </ul>
+         </li>
+         <li class="liol">If A = {1, 2, 3} and B = {3, 4, 5}, what is A × B?
+            <ul class="opt">
+               <li><input type="radio" name="q12" value="a"> A. {(1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (2, 5), (3, 3), (3, 4), (3, 5)}</li>
+               <li><input type="radio" name="q12" value="b"> B. {(1, 3), (2, 3), (3, 3), (1, 4), (2, 4), (3, 4), (1, 5), (2, 5), (3, 5)}</li>
+               <li><input type="radio" name="q12" value="c"> C. {(1, 1), (2, 2), (3, 3)}</li>
+               <li><input type="radio" name="q12" value="d"> D. {(1, 3), (2, 4), (3, 5)}</li>
+            </ul>
+         </li>
+         <li class="liol">What is the power set of {a, b}?
+            <ul class="opt">
+               <li><input type="radio" name="q13" value="a"> A. {{}, {a}, {b}}</li>
+               <li><input type="radio" name="q13" value="b"> B. {{}, {a}, {b}, {a, b}}</li>
+               <li><input type="radio" name="q13" value="c"> C. {{a}, {b}}</li>
+               <li><input type="radio" name="q13" value="d"> D. {a, b}</li>
+            </ul>
+         </li>
+            </ol>
+            <button type="submit" class="inline-btn" onclick="location.href = '../desgin/subjectTest_M.html';">SUBMIT</button>
+         
+         </div>
+      </div>
+   </div>
+</section>
+
+<footer class="footer">
+   Learning Hub Team AU
+</footer>
+
+<!-- Custom JS file link  -->
+<script src="js/script.js"></script>
+</body>
+</html>

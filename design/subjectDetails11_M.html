@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>courses</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <header class="header">
+   
+        <section class="flex">
+     
+           <a href="/dashboard" class="logo"><img src="images/LHLogo.png" width="250" height="78"></a>
+     
+           <form action="search.html" method="post" class="search-form">
+              <input type="text" name="search_box" required placeholder="search courses..." maxlength="100">
+              <button type="submit" class="fas fa-search"></button>
+           </form>
+     
+           <div class="icons">
+              <div id="search-btn" class="fas fa-search"></div>
+              <div id="toggle-btn" class="fas fa-sun"></div>
+           </div>
+     
+        </section>
+     
+     </header>   
+     
+     <div class="side-bar">
+     
+        <div id="close-btn">
+           <i class="fas fa-times"></i>
+        </div>
+     
+        <div class="profile">
+           <img src="images/pic-1.jpg" class="image" alt="">
+           <h3 class="name" id="userFullName"></h3>
+           <p class="role">student</p>
+            <a href="/profile" class="btn">view profile</a>
+        </div>
+     
+        <nav class="navbar">
+            <a href="/dashboard"><i class="fas fa-home"></i><span>dashboard</span></a>
+      <a href="/courses"><i class="fas fa-graduation-cap"></i><span>courses</span></a>
+      <a href="/tests"> <i class="fa-solid fa-pen-to-square"></i><span>tests</span></a>
+      <a href="/doubts"><i class="fa-solid fa-question"></i><span>doubts</span></a>   
+      <a href="/logout"><i class="fa-solid fa-right-from-bracket"></i><span>log out</span></a>
+        </nav>
+     
+     </div>
+     
+
+<section class="courses">
+    
+    
+
+    <h1 class="heading"> <button onclick="history_back()" class="Back"><i class="fa-solid fa-arrow-left"></i></button> 11th Class :</h1>
+ 
+    <div class="box-container">
+ 
+    <div class="box">  
+             <span>4 videos</span>
+          <h3 class="title"><i class="fa-solid fa-bars"></i> CH1: Sets and Functions</h3>
+          <a href="/chapterDetails_Sets11" class="inline-btn">view chapter</a>
+    </div>
+ 
+    <div class="box">
+           <span>10 videos</span>
+        <h3 class="title"><i class="fa-solid fa-divide"></i> CH2: Algebra</h3>
+        <a href="" class="inline-btn">view chapter</a>
+     </div>
+     <div class="box">
+           <span>10 videos</span>
+        <h3 class="title"><i class="fa-solid fa-chart-column"></i> CH3: Coordinate Geometry</h3>
+        <a href="" class="inline-btn">view chapter</a>
+     </div>
+     <div class="box">
+           <span>10 videos</span>
+        <h3 class="title"><i class="fa-solid fa-square-root-variable"></i> CH4: Calculus</h3>
+        <a href="" class="inline-btn">view chapter</a>
+     </div>
+     <div class="box">  
+
+           <span>10 videos</span>
+        <h3 class="title"><i class="fa-solid fa-square-poll-vertical"></i> CH5: Statistics and Probability</h3>
+        <a href="" class="inline-btn">view chapter</a>
+     </div>
+     
+    </div>
+ 
+ </section>
+
+ <footer class="footer  ">
+
+   learning hub team AU
+ 
+ </footer>
+ 
+ 
+ <!-- custom js file link  -->
+ <script src="js/script.js"></script>
+ 
+    
+ </body>
+ </html>
